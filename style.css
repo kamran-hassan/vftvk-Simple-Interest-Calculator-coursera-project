@@ -4,63 +4,44 @@ body
     color: #ffffff;
     font-family: Arial;
 }
-
-h1
+.main-container
 {
-    color: grey;
-    font-family: Verdana;
+    background-color: rgb(237, 235, 236);
+    padding: 10px;
+    align-items: center;
+    border-radius:10px;
+    margin: 100px;
+    min-height: 300px;
+    text-align: center;
 }
 
-.maindiv
+.lable
 {
-    background-color: #ffffff;
-    color: #000000;
-    width: 500px;
-    padding: 20px;
-    border-radius: 25px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 1.5em;
 }
-
-/* #result
+.textINP
 {
-    display: none;
-} */
-
-.contents
+    width: 40%;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 1.5em;
+}
+.main-form
 {
-    margin-left: 80px;
+    text-align: center;
 }
-
-table td
+.btn
 {
-    padding-bottom: 10px;
+    margin:25px;
+    width:40%;
+    height: 30px;
+    border-radius: 10px;
+    background-color: yellow;
+    font-size: 1.5em;
 }
-
-
-#principal{
-    height: 25px;
-    width: 190px;
-}
-
-#years{
-    height: 35px;
-    width: 200px;
-}
-
-#footer
+.sldr
 {
-    margin-top: 10px;
-}
-
-.labels
-{
-    width: 120px;
-
-}
-
-.highlight
-{
-    background-color: #ffff00;
+    margin:25px;
+    height: 50px;
 }
 

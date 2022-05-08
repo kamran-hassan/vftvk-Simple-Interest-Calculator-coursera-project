@@ -1,34 +1,36 @@
-function compute()
-{
-    var principal = document.getElementById("principal").value;
+window.alert("Making Money Transaction involing interest is NON PERMITTED IN ISLAM(I am a Muslim), This project is made for just  showing assignment. I Do not Support the Transaction Involing Interest In any form");
+document.getElementById("intrate").value = 1;
+function calculate(){
 
-    if(principal == "" || principal <= 0)
+    var p = parseInt(document.getElementById("pamt").value);
+    if(isNaN(p)) 
     {
-        alert("Enter a positive number");
-        document.getElementById("principal").focus();
+        
+        window.alert("Unexpect Principal Value")
         return;
     }
-
-    var rate = document.getElementById("rate").value;
-    var years = document.getElementById("years").value;
-    var interest = principal * years * rate / 100;
-
-    var dateNow = new Date();
-    var yearNow = parseInt(dateNow.getFullYear()) + parseInt(years);
-    
-    var resultDisplay = document.getElementById("result");
-    resultDisplay.innerHTML = "If you deposit " + "<span class='highlight'>" + principal + "</span>."  + ", <br> at an interest rate of "+ "<span class='highlight'>" + rate + "</span>%." + "<br> You will receive an amount of " + "<span class='highlight'>" + interest + "</span>" + ", <br> in the year " + "<span class='highlight'>" + yearNow + "</span>";
-}
-
-function SliderValue()
-{
-    var slider = document.getElementById("rate");
-    var output = document.getElementById("rate_display");
-    output.innerHTML = slider.value; // Display the default slider value
-
-    // Update the current slider value (each time you drag the slider handle)
-    slider.oninput = function() 
+    if(p <= 0){
+        window.alert("pricipal should be greater than 0")
+        return;  
+    }
+    var i = parseInt(document.getElementById("intrate").value);
+    if(isNaN(i)) 
     {
-        output.innerHTML = this.value;
-    }  
+        window.alert("Unexpect Interest Rate Value")
+        return;
+    }
+    if(i <= 0){
+        window.alert("Interest should be greater than 0")
+    }
+    var t = parseInt(document.getElementById("year").value);
+    var a =  p*i*t/100;
+    
+    //window.alert(a);
+    document.getElementById("princ").innerHTML = p;
+    document.getElementById("itrate").innerHTML = i;
+    document.getElementById("ys").innerHTML = (new Date()).getFullYear()+t;
+    document.getElementById("answer").innerHTML = a;
+}
+function slideronchange(){
+    document.getElementById("intrate").value = document.getElementById("myRange").value; 
 }
